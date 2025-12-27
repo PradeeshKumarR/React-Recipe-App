@@ -34,7 +34,7 @@ const RecipeList = () => {
     }, [dispatch, search, category, ingredient]);
 
     function handleFavorite(recipe) {
-        if (favorites.includes(recipe.idMeal)) {
+        if (favorites.some(favorite => favorite.idMeal === recipe.idMeal)) {
             dispatch(removeFavorite(recipe.idMeal));
         } else {
             dispatch(addFavorite(recipe));
@@ -51,7 +51,7 @@ const RecipeList = () => {
             <section className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-4' aria-label='Recipe list'>
                 {list && list.length > 0 ? (
                     list.map(recipe => (
-                        <RecipeCard key={recipe.idMeal} recipe={recipe} isFavorite={favorites.includes(recipe.idMeal)} onFavorite={handleFavorite} onCardClick={() => navigate(`/recipe/${recipe.idMeal}`)} />
+                        <RecipeCard key={recipe.idMeal} recipe={recipe} isFavorite={favorites.some(favorite => favorite.idMeal === recipe.idMeal)} onFavorite={handleFavorite} onCardClick={() => navigate(`/recipe/${recipe.idMeal}`)} />
                     ))
                 ) : (
                     !loading && <p className='col-span-full text-center'>No recipes found.</p>

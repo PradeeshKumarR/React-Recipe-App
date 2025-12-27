@@ -34,7 +34,7 @@ const RecipeDetails = () => {
 
     // Handle adding/removing favorites
     function handleFavorite(recipe) {
-        if (favorites.includes(recipe.idMeal)) {
+        if (favorites.some(favorite => favorite.idMeal === recipe.idMeal)) {
             dispatch(removeFavorite(recipe.idMeal));
         } else {
             dispatch(addFavorite(recipe));
@@ -69,7 +69,7 @@ const RecipeDetails = () => {
                     <h1 className='text-xl sm:text-2xl font-bold mb-2 text-center'>{details.strMeal}</h1>
                     <img src={details.strMealThumb} alt={details.strMeal} className='w-40 h-40 sm:w-64 sm:h-64 object-cover rounded mb-2' />
                     <p className='text-gray-500 text-sm'>Category: {details.strCategory}</p>
-                    <button type="button" className={`mt-2 px-2 py-1 sm:px-3 sm:py-1.5 rounded text-xs sm:text-sm font-semibold ${favorites.includes(details.idMeal) ? 'bg-yellow-400 text-white' : 'bg-gray-200 text-gray-700'}`} onClick={() => handleFavorite(details)} aria-pressed={favorites.includes(details.idMeal)} aria-label={favorites.includes(details.idMeal) ? 'Remove from Favorites' : 'Add to Favorites'}>{favorites.includes(details.idMeal) ? 'Remove from Favorites' : 'Add to Favorites'}</button>
+                    <button type="button" className={`mt-2 px-2 py-1 sm:px-3 sm:py-1.5 rounded text-xs sm:text-sm font-semibold ${favorites.some(favorite => favorite.idMeal === details.idMeal) ? 'bg-yellow-400 text-white' : 'bg-gray-200 text-gray-700'}`} onClick={() => handleFavorite(details)} aria-pressed={favorites.some(favorite => favorite.idMeal === details.idMeal)} aria-label={favorites.some(favorite => favorite.idMeal === details.idMeal) ? 'Remove from Favorites' : 'Add to Favorites'}>{favorites.some(favorite => favorite.idMeal === details.idMeal) ? 'Remove from Favorites' : 'Add to Favorites'}</button>
                 </header>
                 <section className='mb-4'>
                     <h2 className='font-semibold mb-2'>Ingredients</h2>

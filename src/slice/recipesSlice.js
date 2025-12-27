@@ -67,7 +67,7 @@ const recipesSlice = createSlice({
             localStorage.setItem('favorites', JSON.stringify(state.favorites));
         },
         removeFavorite: (state, action) => {
-            state.favorites = state.favorites.filter(fav => fav.idMeal !== action.payload);
+            state.favorites = state.favorites.filter(favorite => favorite.idMeal !== action.payload);
             localStorage.setItem('favorites', JSON.stringify(state.favorites));
         },
         clearDetails: (state) => {
