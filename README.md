@@ -1,9 +1,9 @@
-
 # React Recipe App
 
 This is a React application that fetches data from TheMealDB API and allows users to search, filter, and view recipes with a modern, responsive interface.
 
 ## Features
+
 - Fetches recipe data from TheMealDB API
 - Displays recipes in a grid layout with individual recipe cards
 - Search bar for finding recipes by name or keyword
@@ -15,21 +15,25 @@ This is a React application that fetches data from TheMealDB API and allows user
 ## Installation
 
 Clone the repository:
+
 ```
 git clone https://github.com/PradeeshKumarR/React-Recipe-App.git
 ```
 
 Navigate to the project directory:
+
 ```
-cd React-Recipe-App-main
+cd React-Recipe-App/
 ```
 
 Install the dependencies:
+
 ```
 npm install
 ```
 
 Start the development server:
+
 ```
 npm run dev
 ```
@@ -81,6 +85,7 @@ React-Recipe-App-main/
 - `App.jsx` — Main application logic
 
 ## Usage
+
 - Browse through the available recipes
 - Search for recipes by name or keyword
 - Filter recipes by category or ingredient
@@ -88,6 +93,7 @@ React-Recipe-App-main/
 - Add or remove recipes from your favorites
 
 ## Technologies Used
+
 - React
 - React Hooks
 - Redux Toolkit
@@ -96,8 +102,10 @@ React-Recipe-App-main/
 - Vite (for fast development and build)
 
 ## Live Demo
+
 View the deployed landing page here:
 [https://reactrecipeapppradeeshkumarr.netlify.app/](https://reactrecipeapppradeeshkumarr.netlify.app/)
 
 ## License
+
 This project is for educational and demonstration purposes only.
