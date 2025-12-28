@@ -16,6 +16,8 @@ The **React Recipe App** is a dynamic, responsive web application that allows us
   - [Styling](#styling)
 - [Key Components & Files](#key-components--files)
 - [Extending the App](#extending-the-app)
+- [Technologies Used](#technologies-used)
+- [Live Demo](#live-demo)
 - [License](#license)
 
 ---
@@ -32,37 +34,7 @@ The **React Recipe App** is a dynamic, responsive web application that allows us
 
 ---
 
-## Setup & Installation
-
-Clone the repository:
-
-```
-git clone https://github.com/PradeeshKumarR/React-Recipe-App.git
-```
-
-Navigate to the project directory:
-
-```
-cd React-Recipe-App/
-```
-
-Install the dependencies:
-
-```
-npm install
-```
-
-Start the development server:
-
-```
-npm run dev
-```
-
-After running `npm run dev`, open your browser and navigate to the localhost URL shown in the terminal to view the application.
-
----
-
-## Directory Structure
+## Project Structure
 
 The project is organized into the following directory structure:
 
@@ -105,6 +77,36 @@ React-Recipe-App/
 - `src/slice/` — Redux slice for recipes
 - `src/store/` — Redux store configuration
 - `App.jsx` — Main application logic
+
+---
+
+## Setup & Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/PradeeshKumarR/React-Recipe-App.git
+```
+
+Navigate to the project directory:
+
+```
+cd React-Recipe-App/
+```
+
+Install the dependencies:
+
+```
+npm install
+```
+
+Start the development server:
+
+```
+npm run dev
+```
+
+After running `npm run dev`, open your browser and navigate to the localhost URL shown in the terminal to view the application.
 
 ---
 
