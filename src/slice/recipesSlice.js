@@ -4,9 +4,7 @@
  */
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
-// Base URL for TheMealDB API
-const API_BASE_URL = 'https://www.themealdb.com/api/json/v1/1/';
+import { API_BASE_URL } from "../api/constants";
 
 // Async thunk to fetch recipes based on search, or filter
 export const fetchRecipes = createAsyncThunk(

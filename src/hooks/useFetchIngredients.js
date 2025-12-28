@@ -4,9 +4,7 @@
  */
 import axios from "axios";
 import { useEffect, useState } from "react";
-
-// Base URL for TheMealDB API
-const API_BASE_URL = 'https://www.themealdb.com/api/json/v1/1';
+import { API_BASE_URL } from "../api/constants";
 
 /**
  * Custom hook to fetch ingredients from TheMealDB API

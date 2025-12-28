@@ -6,7 +6,6 @@
 import { Route, Routes } from 'react-router-dom';
 import RecipeList from './pages/RecipeList';
 import RecipeDetails from './pages/RecipeDetails';
-import './App.css'
 
 /**
  * App component defining application routes

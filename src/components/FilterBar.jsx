@@ -12,19 +12,19 @@
 
 const FilterBar = ({ categories, ingredients, onCategoryChange, onIngredientChange }) => {
     return (
-        <section className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-4 w-full max-w-lg mx-auto" aria-label="Recipe filters">
-            <label className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                <span className="mr-2 mb-1 sm:mb-0">Category:</span>
-                <select className="border rounded px-2 py-1 w-full sm:w-auto" onChange={e => onCategoryChange(e.target.value)} defaultValue="">
+        <section className="flex flex-row flex-wrap gap-4 mb-8 w-full justify-center font-[Poppins]" aria-label="Recipe filters">
+            <label className="flex flex-col md:flex-row items-start sm:items-center w-64">
+                <span className="mr-2 mb-1 md:mb-0 font-semibold text-[#222]">Category:</span>
+                <select className="border-2 border-[#ececec] rounded-full px-4 py-2 w-full focus:ring-2 focus:ring-[#fc8019] bg-[#fafafa] text-[#222]" onChange={e => onCategoryChange(e.target.value)} defaultValue="">
                     <option value="">All Categories</option>
                     {categories.map(category => (
                         <option key={category.strCategory} value={category.strCategory}>{category.strCategory}</option>
                     ))}
                 </select>
             </label>
-            <label className="flex flex-col sm:flex-row items-start sm:items-center w-full">
-                <span className="mr-2 mb-1 sm:mb-0">Ingredient:</span>
-                <select className="border rounded px-2 py-1 w-full sm:w-auto" onChange={e => onIngredientChange(e.target.value)} defaultValue="">
+            <label className="flex flex-col md:flex-row items-start md:items-center w-64">
+                <span className="mr-2 mb-1 md:mb-0 font-semibold text-[#222]">Ingredient:</span>
+                <select className="border-2 border-[#ececec] rounded-full px-4 py-2 w-full focus:ring-2 focus:ring-[#fc8019] bg-[#fafafa] text-[#222]" onChange={e => onIngredientChange(e.target.value)} defaultValue="">
                     <option value="">All Ingredients</option>
                     {ingredients.map(ingredient => (
                         <option key={ingredient.strIngredient} value={ingredient.strIngredient}>{ingredient.strIngredient}</option>

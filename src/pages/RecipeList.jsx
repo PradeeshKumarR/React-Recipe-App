@@ -42,19 +42,19 @@ const RecipeList = () => {
     }
 
     return (
-        <main className='max-w-6xl mx-auto px-2 sm:px-4 py-4 w-full'>
-            <h1 className='text-2xl sm:text-3xl font-bold mb-4 text-center'>Recipe App</h1>
+        <main className='w-full min-h-screen bg-[#f5f5f6] px-8 py-8 font-[Poppins]'>
+            <h1 className='text-4xl font-extrabold mb-8 text-center text-[#fc8019] tracking-tight drop-shadow'>Recipe App</h1>
             <SearchBar onSearch={setSearch} />
             <FilterBar categories={categories} ingredients={ingredients} onCategoryChange={setCategory} onIngredientChange={setIngredient} />
-            {loading && <p className='text-center'>Loading recipes...</p>}
-            {error && <p className='text-center text-red-500'>{error}</p>}
-            <section className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-4' aria-label='Recipe list'>
+            {loading && <p className='text-center text-[#6366f1]'>Loading recipes...</p>}
+            {error && <p className='text-center text-[#ef4444]'>{error}</p>}
+            <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-8 w-full' aria-label='Recipe list'>
                 {list && list.length > 0 ? (
                     list.map(recipe => (
                         <RecipeCard key={recipe.idMeal} recipe={recipe} isFavorite={favorites.some(favorite => favorite.idMeal === recipe.idMeal)} onFavorite={handleFavorite} onCardClick={() => navigate(`/recipe/${recipe.idMeal}`)} />
                     ))
                 ) : (
-                    !loading && <p className='col-span-full text-center'>No recipes found.</p>
+                    !loading && <p className='col-span-full text-center text-[#fbbf24]'>No recipes found.</p>
                 )}
             </section>
         </main>

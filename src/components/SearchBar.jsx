@@ -26,9 +26,9 @@ const SearchBar = ({ onSearch }) => {
     }
 
     return (
-        <form className='flex flex-col sm:flex-row gap-2 mb-4 w-full max-w-lg mx-auto' role='search' aria-label='Recipe search' onSubmit={handleSubmit}>
-            <input type="search" className="border rounded px-3 py-2 w-full" placeholder='Search recipes...' value={value} onChange={e => setValue(e.target.value)} aria-label='Search recipes by name or keyword' />
-            <button type="submit" className='bg-blue-500 text-white px-4 py-2 rounded w-full sm-w-auto'>Search</button>
+        <form className='flex flex-row gap-4 mb-8 w-full justify-center font-[Poppins]' role='search' aria-label='Recipe search' onSubmit={handleSubmit}>
+            <input type="search" className="border-2 border-[#ececec] rounded-full px-6 py-3 w-96 focus:ring-2 focus:ring-[#fc8019] bg-[#fafafa] text-[#222] placeholder-[#aaa}" placeholder='Search recipes...' value={value} onChange={e => setValue(e.target.value)} aria-label='Search recipes by name or keyword' />
+            <button type="submit" className='bg-[#fc8019] text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-[#ff944d] transition-colors duration-500'>Search</button>
         </form>
     );
 }
