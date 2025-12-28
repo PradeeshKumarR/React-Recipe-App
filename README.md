@@ -16,7 +16,7 @@ This is a React application that fetches data from TheMealDB API and allows user
 
 Clone the repository:
 ```
-git clone <your-repo-url>
+git clone https://github.com/PradeeshKumarR/React-Recipe-App.git
 ```
 
 Navigate to the project directory:
